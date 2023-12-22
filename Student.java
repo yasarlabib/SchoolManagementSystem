@@ -19,8 +19,14 @@ public class Student {
 
     // not going to alter the student's name or ID
 
+    // mutator for grade
     public void setGrade(int grade){
         this.grade = grade;
+    }
+
+    // add the tuition to the tuitionPaid when the school receives the funds
+    public void updateTuitionPaid(int tuition){
+        tuitionPaid += tuition;
     }
 }
 
