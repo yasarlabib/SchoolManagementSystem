@@ -28,6 +28,31 @@ public class Student {
     public void updateTuitionPaid(int tuition){
         tuitionPaid += tuition;
     }
+
+    // return the id of the student
+    public int getId() {
+        return id;
+    }
+
+    // return the name of the student
+    public String getName() {
+        return name;
+    }
+
+    // return the grade of the student
+    public int getGrade() {
+        return grade;
+    }
+
+    // return the tuition paid by the student
+    public int getTuitionPaid() {
+        return tuitionPaid;
+    }
+
+    // return the total tuition for the student
+    public int getTuitionTotal() {
+        return tuitionTotal;
+    }
 }
 
 
