@@ -27,6 +27,10 @@ public class Main {
         // creating School
         School rhs = new School(teacherList, studentList);
 
+        von.payTuition(5000);
+        rakesh.payTuition(3000);
         System.out.println("RHS has earned $" + rhs.getTotalMoneyEarned());
+
+        System.out.println("-----Making RHS PAY TEACHER SALARY-----");
     }
 }
