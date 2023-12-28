@@ -8,8 +8,8 @@ import java.util.*;
 public class School {
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static int totalMoneyEarned;
+    private static int totalMoneySpent;
 
     // constructor for the School class
     public School(List<Teacher> teachers, List<Student> students) {
@@ -50,8 +50,8 @@ public class School {
     }
 
     // adds the total money earned by the school
-    public void updateTotalMoneyEarned(int moneyEarned) {
-        totalMoneyEarned = moneyEarned;
+    public static void updateTotalMoneyEarned(int moneyEarned) {
+        totalMoneyEarned += moneyEarned;
     }
 
     // updates the money spent by the school, which is the salary given to teachers
