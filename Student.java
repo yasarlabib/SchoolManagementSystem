@@ -10,6 +10,7 @@ public class Student {
 
     // constructor for the student class
     public Student(int id, String name, int grade){
+
         this.id = id;
         this.name = name;
         this.grade = grade;
@@ -25,8 +26,9 @@ public class Student {
     }
 
     // add the tuition to the tuitionPaid when the school receives the funds
-    public void updateTuitionPaid(int tuition){
+    public void payTuition(int tuition){
         tuitionPaid += tuition;
+        School.updateTotalMoneyEarned(tuitionPaid);
     }
 
     // return the id of the student
@@ -52,6 +54,11 @@ public class Student {
     // return the total tuition for the student
     public int getTuitionTotal() {
         return tuitionTotal;
+    }
+
+    // return the remaining tuition
+    public int getRemianingTuition(){
+        return tuitionTotal - tuitionPaid;
     }
 }
 
