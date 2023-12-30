@@ -27,10 +27,23 @@ public class Main {
         // creating School
         School rhs = new School(teacherList, studentList);
 
+        // students paying tuition
         von.payTuition(5000);
         rakesh.payTuition(3000);
+
+        // money earned by the school so far
         System.out.println("RHS has earned $" + rhs.getTotalMoneyEarned());
 
-        System.out.println("-----Making RHS PAY TEACHER SALARY-----");
+        // paying teachers their salary
+        System.out.println("-----MAKING SCHOOL PAY TEACHER SALARY-----");
+        gigi.receiveSalary(gigi.getSalary());
+        System.out.println("RHS has paid salary to " + gigi.getName() + " and now has $" + rhs.getTotalMoneyEarned());
+
+        bob.receiveSalary(bob.getSalary());
+        System.out.println("RHS has paid salary to " + bob.getName() + " and now has $" + rhs.getTotalMoneyEarned());
+
+        // printing out information about objects
+        System.out.println(von);
+        System.out.println(jane);
     }
 }
