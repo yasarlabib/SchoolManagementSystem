@@ -3,12 +3,14 @@ public class Teacher {
     private int id;
     private String name;
     private int salary;
+    private int salaryEarned;
 
     // constructor for the Teacher class, helps create Teacher object
     public Teacher(int id, String name, int salary){
         this.id = id;
         this.name = name;
         this.salary = salary;
+        this.salaryEarned = 0;
     }
 
     // returns the id for the current teacher
@@ -31,5 +33,10 @@ public class Teacher {
         this.salary = salary;
     }
 
+    // adds to the salary and removes from the total money earned by the school
+    public void receiveSalary(int salary){
+        salaryEarned += salary;
+        School.updateTotalMoneySpent(salary);
+    }
 
 }
