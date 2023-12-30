@@ -60,6 +60,13 @@ public class Student {
     public int getRemianingTuition(){
         return tuitionTotal - tuitionPaid;
     }
+
+    // toStrng() method for the Student class
+    @Override
+    public String toString() {
+        return "Student's Name: " + name +
+                "\nTotal Tuition Paid: $" + tuitionPaid;
+    }
 }
 
 
